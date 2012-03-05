@@ -1,0 +1,1 @@
+ikvmc.exe -target:library -out:../target/dependency/bukkit.dll -nojni -nowarn:100,105,111 ../target/dependency/bukkit.jar

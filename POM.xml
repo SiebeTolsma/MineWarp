@@ -25,7 +25,19 @@
   </dependencies>
 
   <build>
-    <defaultGoal>clean package</defaultGoal>
+    <!-- Resources -->
+    <resources>
+      <resource>
+        <targetPath>.</targetPath>
+        <filtering>true</filtering>
+        <directory>${basedir}/src/main/java/</directory>
+        <includes>
+          <include>plugin.yml</include>
+        </includes>
+      </resource>
+    </resources>
+
+    <!-- Plugins -->
     <plugins>
       <!-- Compiler -->
       <plugin>
@@ -43,7 +55,6 @@
          <groupId>org.apache.maven.plugins</groupId>
          <artifactId>maven-jar-plugin</artifactId>
          <version>2.3.1</version>
-         <configuration></configuration>
        </plugin>
 
        <!-- Test plugin -->
@@ -54,6 +65,33 @@
          <configuration>
            <skipTests>true</skipTests>
          </configuration>
+       </plugin>
+
+       <!-- Dependencies -->
+       <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-dependency-plugin</artifactId>
+         <version>2.4</version>
+         <executions>
+           <execution>
+             <id>copy</id>
+             <phase>clean</phase>
+             <goals>
+               <goal>copy</goal>
+             </goals>
+             <configuration>
+               <artifactItems>
+                 <artifactItem>
+                   <groupId>org.bukkit</groupId>
+                   <artifactId>bukkit</artifactId>
+                   <version>1.2.3-R0.1-SNAPSHOT</version>
+                   <type>jar</type>
+                   <destFileName>bukkit.jar</destFileName>
+                 </artifactItem>
+               </artifactItems>
+             </configuration>
+           </execution>
+         </executions>
        </plugin>
     </plugins>
   </build>

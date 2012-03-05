@@ -9,10 +9,8 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BCA16ABA-3733-4C20-90CB-49FA1E2BC71A}.Debug|x86.ActiveCfg = Debug|x86
-		{BCA16ABA-3733-4C20-90CB-49FA1E2BC71A}.Debug|x86.Build.0 = Debug|x86
-		{BCA16ABA-3733-4C20-90CB-49FA1E2BC71A}.Release|x86.ActiveCfg = Release|x86
-		{BCA16ABA-3733-4C20-90CB-49FA1E2BC71A}.Release| x86.Build.0 = Release|x86
+		{BCA16ABA-3733-4C20-90CB-49FA1E2BC71A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BCA16ABA-3733-4C20-90CB-49FA1E2BC71A}.Release|x86.ActiveCfg = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

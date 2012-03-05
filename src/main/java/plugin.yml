@@ -1,0 +1,11 @@
+name: Minewarp
+main: net.bot2k3.siebe.Minewarp.MinewarpPlugin
+version: 0.1
+
+commands:
+   home:
+      description: Transports you home, or sets your new home location.
+      usage: /home [set]
+   warp:
+      description: Transports, sets, removes, or lists warp points.
+      usage: /warp [list|set|delete] [public|private]

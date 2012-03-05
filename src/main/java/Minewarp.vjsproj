@@ -5,12 +5,17 @@
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{BCA16ABA-3733-4C20-90CB-49FA1E2BC71A}</ProjectGuid>
+    <OutputPath>bin\</OutputPath>
     <OutputType>Library</OutputType>
     <RootNamespace>net.bot2k3.siebe.Minewarp</RootNamespace>
     <AssemblyName>Minewarp</AssemblyName>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="bukkit, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\target\dependency\bukkit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -18,4 +23,5 @@
   <ItemGroup>
     <Compile Include="MinewarpPlugin.java" />
   </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualJSharp.targets" />
 </Project>
