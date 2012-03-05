@@ -1,0 +1,21 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BCA16ABA-3733-4C20-90CB-49FA1E2BC71A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>net.bot2k3.siebe.Minewarp</RootNamespace>
+    <AssemblyName>Minewarp</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MinewarpPlugin.java" />
+  </ItemGroup>
+</Project>
