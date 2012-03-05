@@ -103,12 +103,13 @@ public class MinewarpPlugin extends JavaPlugin
 
         // if we're still here we need to send usage.
         player.sendMessage(
-            new String[] {
-				ChatColor.AQUA + "/warp set <name> [public|private] " + ChatColor.WHITE + "- Adds the current location to your warp list",
-				ChatColor.AQUA + "/warp del <name> [public|private] " + ChatColor.WHITE + "- Removes a warp point",
-				ChatColor.AQUA + "/warp list " + ChatColor.WHITE + "- Lists all your warp points",
-				ChatColor.AQUA + "/warp <name> " + ChatColor.WHITE + "- Transports you to a warp point"
-			});
+            new String[] 
+            {
+                ChatColor.AQUA + "/warp set <name> [public|private] " + ChatColor.WHITE + "- Adds the current location to your warp list",
+                ChatColor.AQUA + "/warp del <name> [public|private] " + ChatColor.WHITE + "- Removes a warp point",
+                ChatColor.AQUA + "/warp list " + ChatColor.WHITE + "- Lists all your warp points",
+                ChatColor.AQUA + "/warp <name> " + ChatColor.WHITE + "- Transports you to a warp point"
+            });
     }
 
     /**
@@ -222,10 +223,11 @@ public class MinewarpPlugin extends JavaPlugin
     {
         // list all the warp points, including public ones.
         player.sendMessage(
-            new String[] {
-				ChatColor.WHITE + "Public: " + this.getWarpList(this.getPlayerConfig(null)),
-				ChatColor.WHITE + "Private: " + this.getWarpList(config)
-			});
+            new String[] 
+            {
+                ChatColor.WHITE + "Public: " + this.getWarpList(this.getPlayerConfig(null)),
+                ChatColor.WHITE + "Private: " + this.getWarpList(config)
+            });
     }
 
     /**
@@ -282,10 +284,10 @@ public class MinewarpPlugin extends JavaPlugin
             // send usage about about the "home" command.
             player.sendMessage(
                 new String[]
-				{
-					ChatColor.AQUA + "/home " + ChatColor.WHITE + "- Transports you home",
-					ChatColor.AQUA + "/home set " + ChatColor.WHITE + "- Sets your home location"
-				});
+                {
+                    ChatColor.AQUA + "/home " + ChatColor.WHITE + "- Transports you home",
+                    ChatColor.AQUA + "/home set " + ChatColor.WHITE + "- Sets your home location"
+                });
         }
     }
 
@@ -320,7 +322,6 @@ public class MinewarpPlugin extends JavaPlugin
                 writer.write(ChatColor.AQUA.toString());
             }
 
-            writer.write(" ");
             writer.write((String)iterator.next());
 
             i++;
@@ -400,7 +401,9 @@ public class MinewarpPlugin extends JavaPlugin
             if (section.contains("world") &&
                 section.contains("x") &&
                 section.contains("y") &&
-                section.contains("z"))
+                section.contains("z") &&
+                section.contains("pitch") &&
+                section.contains("yaw"))
             {
                 // found the section, now get the world, x, y and z.
                 String n = section.getString("world");
