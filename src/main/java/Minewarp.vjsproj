@@ -23,5 +23,8 @@
   <ItemGroup>
     <Compile Include="MinewarpPlugin.java" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="plugin.yml" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualJSharp.targets" />
 </Project>
